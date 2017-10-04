@@ -42,6 +42,13 @@ class Album
     return albums.map { |album| Album.new(album) }
   end
 
+# List All Artists/Albums
+# in psql
+# SELECT artists.*, albums.* FROM artists INNER JOIN albums on artists.id = albums.artist_id;
+# OR
+# SELECT albums.title, artists.name, albums.genre FROM albums INNER JOIN artists ON artists.id = albums.artist_id;
+# if you want to see them without the IDs
+
 	def artists()
 		sql = "SELECT * FROM artists WHERE id = $1;"
 		values = [@artist_id]
@@ -72,4 +79,19 @@ class Album
 	# 	values = [@id]
 	# 	SqlRunner.run(sql, "delete", values)
 	# end
+
+	def self.find(id)
+		sql = "SELECT * FROM albums WHERE id = $1;"
+		values = [id]
+		results = SqlRunner.run(sql, "find_album", values)
+		album_hash = results.first
+		album = Album.new(album_hash)
+		return album
+	end
+	# and typing
+	# album2
+	# in pry in terminal to get the id (230), then
+	# Album.find(230)
+	# => #<Album:0x007fd6cf966d58 @artist_id=124, @genre="pop", @id=230, @title="Waterloo">
+
 end
