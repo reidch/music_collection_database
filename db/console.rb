@@ -29,19 +29,40 @@ album1 = Album.new({
 
 album2 = Album.new({
 	'artist_id' => artist1.id,
+	'title' => 'Waterloo',
+	'genre' => 'pop'
+	})
+
+album3 = Album.new({
+	'artist_id' => artist2.id,
 	'title' => 'Bad Girls',
 	'genre' => 'disco'
 	})
 
-album3 = Album.new({
-	'artist_id' => artist1.id,
+album4 = Album.new({
+	'artist_id' => artist2.id,
+	'title' => 'Another Place and Time',
+	'genre' => 'disco'
+	})
+
+album5 = Album.new({
+	'artist_id' => artist3.id,
 	'title' => 'Touching You, Touching Me',
+	'genre' => 'pop'
+	})
+
+album6 = Album.new({
+	'artist_id' => artist3.id,
+	'title' => 'Beautiful Noise',
 	'genre' => 'pop'
 	})
 
 album1.save()
 album2.save()
 album3.save()
+album4.save()
+album5.save()
+album6.save()
 
 binding.pry
 nil
