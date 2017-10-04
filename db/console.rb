@@ -64,5 +64,19 @@ album4.save()
 album5.save()
 album6.save()
 
+#EDITING THE ARTIST - I'VE COMMENTED THIS OUT SO THAT IT DOESN'T CHANGE IT FOR THE OTHER FUNCTIONS
+# artist1.name = "Bjorn Again"
+# artist1.update()
+
+#EDITING AN ALBUM - I'VE COMMENTED THIS OUT SO THAT IT DOESN'T CHANGE IT FOR THE OTHER FUNCTIONS
+# album4.genre = "pop"
+# album4.update()
+
+#DELETING AN ARTIST - I can't quite get this one to work - ask about this.
+# artist3.delete_artist()
+
+#DELETING AN ALBUM - I'VE COMMENTED THIS OUT SO THAT IT DOESN'T CHANGE IT FOR THE OTHER FUNCTIONS
+# album1.delete()
+
 binding.pry
 nil

@@ -50,4 +50,26 @@ class Album
 		return Artist.new(artist)
 	end
 
+#EDITING AN ALBUM - I'VE COMMENTED THIS OUT SO THAT IT DOESN'T CHANGE IT FOR THE OTHER FUNCTIONS
+	# def update()
+	# 	sql = "
+	# 	UPDATE albums SET (
+	# 		artist_id,
+	# 		title,
+	# 		genre
+	# 	) =
+	# 	(
+	# 		$1, $2, $3
+	# 	)
+	# 	WHERE id = $4;"
+	# 	values = [@artist_id, @title, @genre, @id]
+	# 	SqlRunner.run(sql, "update_album", values)
+	# end
+
+#DELETING AN ALBUM - I'VE COMMENTED THIS OUT SO THAT IT DOESN'T CHANGE IT FOR THE OTHER FUNCTIONS
+	# def delete()
+	# 	sql = "DELETE FROM albums WHERE id = $1"
+	# 	values = [@id]
+	# 	SqlRunner.run(sql, "delete", values)
+	# end
 end

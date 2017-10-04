@@ -46,4 +46,26 @@ class Artist
 		results = SqlRunner.run(sql, "get_albums", values)
 		return results.map { |album| Album.new(album) }
 	end
+
+#EDITING THE ARTIST - I'VE COMMENTED THIS OUT SO THAT IT DOESN'T CHANGE IT FOR THE OTHER FUNCTIONS
+	# def update()
+	# 	sql = "
+	# 	UPDATE artists SET (
+	# 		name
+	# 	) =
+	# 	(
+	# 		$1
+	# 	)
+	# 	WHERE id = $2;"
+	# 	values = [@name, @id]
+	# 	SqlRunner.run(sql, "update_artist", values)
+	# end
+
+#DELETING AN ARTIST - I can't quite get this one to work
+	# def delete_artist()
+	# 	sql = "DELETE FROM artists WHERE id = $1"
+	# 	values = [@artist_id]
+	# 	SqlRunner.run(sql, "delete_artist", values)
+	# end
+
 end
